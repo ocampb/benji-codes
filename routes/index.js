@@ -8,14 +8,14 @@ router.get("/", function (req, res, next) {
 });
 
 // //Login page
-// router.get("/login", function (req, res, next) {
-//   res.render("login", { title: "Express" });
-// });
+router.get("/login", function (req, res, next) {
+  res.render("login", { title: "Express" });
+});
 
 // //Sign Up page
-// router.get("/signup", function (req, res, next) {
-//   res.render("signup", { title: "Express" });
-// });
+router.get("/signup", function (req, res, next) {
+  res.render("signup", { title: "Express" });
+});
 
 // //My Pets
 // router.get("/mypets", function (req, res, next) {

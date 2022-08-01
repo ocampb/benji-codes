@@ -207,6 +207,11 @@ input {
   text-decoration: underline;
 }
 
+/* ====== SIGNUP PAGE ====== */
+#right-signup-button {
+  margin-top: 1em;
+}
+
 /* ====== FOOTER ====== */
 footer {
   width: 100vw;
