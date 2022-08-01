@@ -36,7 +36,6 @@ router.post("/login", async (req, res) => {
   if (passwordCorrect === true) {
     console.log("PASSWORD IS CORRECT");
     req.session.userId = databaseentry.id;
-
     res.redirect("/");
   } else {
     res.redirect("/");

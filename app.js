@@ -8,6 +8,10 @@ var logger = require("morgan");
 var PORT = process.env.PORT || 3000;
 const es6Renderer = require("express-es6-template-engine");
 const usersRoutes = require("./routes/users");
+const petsRoutes = require("./routes/pets");
+const enrichmentRoutes = require("./routes/enrichment");
+const medicationRoutes = require("./routes/medication");
+const vetRoutes = require("./routes/veterinary_visits");
 var indexRouter = require("./routes/index");
 
 const isAuthenticated = (req, res, next) => {
@@ -42,7 +46,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/users", isAuthenticated, usersRoutes);
+app.use("/users", usersRoutes);
+app.use("/pets", isAuthenticated, petsRoutes);
+app.use("/enrichment", isAuthenticated, enrichmentRoutes);
+app.use("/medication", isAuthenticated, medicationRoutes);
+app.use("/veterinary_visits", isAuthenticated, vetRoutes);
 app.use("/", indexRouter);
 
 //app.use("/users", usersRouter);
