@@ -23,4 +23,33 @@ router.post("/create_medication", async (req, res) => {
   }
 });
 
+router.get("/view_medication_by_id/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const Medication1 = await Medication.findOne({
+      where: { id: id },
+    });
+
+    console.log(Medication1);
+    res.send(Medication1);
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
+
+router.get("/view_all_medication_by_petid/:petid", async (req, res) => {
+  const { petid } = req.params;
+  try {
+    const Medication1 = await Medication.findAll({
+      where: { PetId: petid },
+    });
+    console.log(Medication1);
+    res.send(Medication1);
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
+
 module.exports = router;
