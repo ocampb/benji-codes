@@ -13,6 +13,7 @@
     "dotenv": "^16.0.1",
     "express": "~4.16.1",
     "express-es6-template-engine": "^2.2.3",
+    "express-session": "^1.17.3",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "mysql2": "^2.3.3",
