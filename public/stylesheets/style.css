@@ -4,10 +4,20 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  min-height: 100vh;
+}
+
 body {
   font-family: "Hind Siliguri", sans-serif;
   color: #262322;
   background-color: #fffcf9;
+  min-height: 100vh;
+}
+
+main {
+  min-height: 100vh;
 }
 
 h1 {
@@ -207,6 +217,64 @@ input {
   text-decoration: underline;
 }
 
+/* ====== SIGNUP PAGE ====== */
+#right-signup-button {
+  margin-top: 1em;
+}
+
+/* ====== MY PETS PAGE ====== */
+.head-greeting-container {
+  margin: 30px;
+}
+
+.mypets-head-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recent-container {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  margin: 30px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.recent-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.pets-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin: 30px;
+}
+
+#mypets-header {
+  margin-bottom: 10px;
+}
+
+.mypets-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+}
+
+.mypets-card {
+  border: 2px solid black;
+  border-radius: 20px;
+  /* justify-content: space-around; */
+  max-width: 200px;
+  padding: 20px;
+  text-align: center;
+}
+
 /* ====== FOOTER ====== */
 footer {
   width: 100vw;
@@ -261,6 +329,7 @@ footer {
 .brand a:hover {
   color: #f5f7f0;
 }
+
 svg {
   width: 50px;
   height: 30px;
