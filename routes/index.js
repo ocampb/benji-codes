@@ -7,22 +7,22 @@ router.get("/", function (req, res, next) {
   res.render("index", { title: "Express" });
 });
 
-// //Login page
+//Login page
 router.get("/login", function (req, res, next) {
   res.render("login", { title: "Express" });
 });
 
-// //Sign Up page
+// Sign Up page
 router.get("/signup", function (req, res, next) {
   res.render("signup", { title: "Express" });
 });
 
-// //My Pets
+// My Pets page
 router.get("/mypets", function (req, res, next) {
   res.render("mypets", { title: "Express" });
 });
 
-// //Pet Profile
+// Pet Profile page
 router.get("/petprofile", function (req, res, next) {
   res.render("petprofile", { title: "Express" });
 });
