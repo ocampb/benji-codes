@@ -64,7 +64,7 @@ a {
 }
 
 .nav-link {
-  transition: 0.7s ease;
+  transition: 0.3s ease;
 }
 
 .nav-link:hover {
@@ -365,6 +365,118 @@ input {
 
 .option {
   text-align: right;
+}
+
+/* ===== PET PROFILE ====== */
+main > h1 {
+  margin: 20px;
+}
+
+.main-profile-container {
+  display: flex;
+  width: 50vw;
+}
+
+.profile-container {
+  display: flex;
+  /* border: 2px solid black; */
+  border-radius: 20px;
+  background-color: #f1f1f1;
+  margin: 20px;
+  padding: 20px;
+  width: 50vw;
+}
+
+.profile-container > div:nth-child(1) {
+  /* border: 2px solid black; */
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 50px;
+  margin-right: 20px;
+}
+
+.event-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  background-color: #f1f1f1;
+  margin: 20px;
+  padding: 20px;
+  width: 10vw;
+  height: 20vh;
+  justify-content: center;
+  text-align: center;
+}
+
+.event-container:hover {
+  cursor: pointer;
+  background-color: #f5f7f0;
+}
+
+/* Tab navigation */
+.tab {
+  overflow: hidden;
+  border-bottom: 1px solid black;
+  margin: 0 10vw 0 10vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tab a {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s ease;
+  font-size: 17px;
+  color: black;
+  width: 100%;
+  text-align: center;
+}
+
+.tab a:hover {
+  background-color: #ddd;
+}
+
+.tab a.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  margin: 0 10vw 10vw 10vw;
+  background-color: #d3d3d3;
+}
+
+.profile-card {
+  border-radius: 20px;
+  max-width: 30vw;
+  padding: 20px;
+  margin: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  cursor: pointer;
+}
+.glyph-container {
+  display: flex;
+}
+
+.glyph {
+  border: 2px solid black;
+  padding: 10px;
+  margin: 10px;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
 }
 
 /* ====== FOOTER ====== */
