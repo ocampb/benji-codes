@@ -52,4 +52,40 @@ router.get("/view_all_medication_by_petid/:petid", async (req, res) => {
   }
 });
 
+router.put("/update_by_id/:id", async (req, res) => {
+  const { id } = req.params;
+  const { name, dosage, date_administered } = req.body;
+  try {
+    const updatedRows = await Medication.update(
+      {
+        name: name,
+        dosage: dosage,
+        date_administered: date_administered,
+      },
+      {
+        where: { id: id },
+      }
+    );
+    console.log(updatedRows);
+    res.send(updatedRows);
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
+
+router.delete("/delete_by_id/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const Medication1 = await Medication.destroy({
+      where: { id: id },
+    });
+    console.log(Medication1);
+    res.status(200).end();
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
+
 module.exports = router;

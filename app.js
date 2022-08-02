@@ -51,7 +51,7 @@ app.use("/pets", isAuthenticated, petsRoutes);
 app.use("/enrichment", isAuthenticated, enrichmentRoutes);
 app.use("/medication", isAuthenticated, medicationRoutes);
 app.use("/veterinary_visits", isAuthenticated, vetRoutes);
-app.use("/", indexRouter);
+app.use("/", isAuthenticated, indexRouter);
 
 //app.use("/users", usersRouter);
 

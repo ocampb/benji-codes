@@ -75,4 +75,17 @@ router.put("/update_vet_visit/:id", async (req, res) => {
   }
 });
 
+router.delete("/delete_by_id/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const Vet1 = await Veterinary_Visits.destroy({
+      where: { id: id },
+    });
+    res.status(200).end();
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
+
 module.exports = router;
