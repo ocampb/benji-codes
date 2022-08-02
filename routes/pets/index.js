@@ -27,4 +27,17 @@ router.post("/create_pets", async (req, res) => {
   }
 });
 
+router.delete("/delete_by_id/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    await Pets.destroy({
+      where: { id: id },
+    });
+    res.status(200).end();
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
+
 module.exports = router;

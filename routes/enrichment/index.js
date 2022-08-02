@@ -52,7 +52,6 @@ router.get("/view_all_enrichment_by_petid/:petid", async (req, res) => {
   }
 });
 
-// works but throws a lot of errors and crashes nodemon
 router.delete("/delete_by_id/:id", async (req, res) => {
   const { id } = req.params;
   try {

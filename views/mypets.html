@@ -42,7 +42,7 @@
     <main>
       <div class="mypets-head-container">
         <div class="head-greeting-container">
-          <h1 id="greeting">Hi, Olivia!</h1>
+          <h1 id="greeting">Hi, ${name}!</h1>
           <p id="welcome">Welcome to your pets dashboard.</p>
         </div>
         <div class="recent-container">
@@ -72,31 +72,17 @@
       <div class="pets-container">
         <h1 id="mypets-header">My Pets</h1>
         <div class="mypets-grid">
+          ${allpets.map(pet => { return `
+          <div class="mypets-card">
+            <h3>${pet.name}</h3>
+            <p>${pet.species}</p>
+            <p>${pet.birthday}</p>
+            <div class="option">
+              <a href="#" class="option-link">...</a>
+            </div>
+          </div>
+          ` }).join('')}
           <!-- Cards -->
-          <div class="mypets-card">
-            <h3>Benji</h3>
-            <p>Bearded dragon</p>
-            <p>3 years 3 months old</p>
-            <div class="option">
-              <a href="#" class="option-link">...</a>
-            </div>
-          </div>
-          <div class="mypets-card">
-            <h3>Winnie</h3>
-            <p>Dog</p>
-            <p>2 years 1 month old</p>
-            <div class="option">
-              <a href="#" class="option-link">...</a>
-            </div>
-          </div>
-          <div class="mypets-card">
-            <h3>Stella</h3>
-            <p>Cat</p>
-            <p>12 years 1 month old</p>
-            <div class="option">
-              <a href="#" class="option-link">...</a>
-            </div>
-          </div>
           <div class="mypets-card">
             <div id="plus-sign">+</div>
             <div>Add pet</div>
