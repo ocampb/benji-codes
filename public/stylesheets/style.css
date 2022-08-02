@@ -4,10 +4,20 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  min-height: 100vh;
+}
+
 body {
   font-family: "Hind Siliguri", sans-serif;
   color: #262322;
   background-color: #fffcf9;
+  min-height: 100vh;
+}
+
+main {
+  min-height: 100vh;
 }
 
 h1 {
@@ -16,7 +26,8 @@ h1 {
 }
 
 h2 {
-  font-family: "Glegoo", serif;
+  /* font-family: "Glegoo", serif; */
+  text-align: center;
 }
 
 /* ====== NAVBAR ====== */
@@ -57,7 +68,7 @@ a {
 }
 
 .nav-link:hover {
-  color: dodgerblue;
+  color: #8a8a8a;
 }
 
 .hamburger {
@@ -113,6 +124,52 @@ a {
     left: 0;
   }
 }
+
+/* ====== LANDING PAGE ====== */
+#hero-image {
+  min-height: 100vh;
+  width: 100vw;
+  height: 944px;
+  /* background-image: url();
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+  background-color: #d3d3d3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#hero-text {
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero-header {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 0;
+  font-size: 80px;
+}
+
+#hero-description {
+  font-size: 30px;
+  font-family: Glegoo, serif;
+}
+
+#landing-button {
+  margin-top: 20px;
+  display: block;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
 /* ====== LOGIN PAGE ====== */
 .containerHome {
   min-height: 100vh;
@@ -185,7 +242,7 @@ input {
   background-color: white;
   color: black;
   padding: 1em 6em;
-  display: block;
+  /* display: block; */
   cursor: pointer;
   border-radius: 3.33em;
   transition: 0.3s ease;
@@ -210,6 +267,104 @@ input {
 /* ====== SIGNUP PAGE ====== */
 #right-signup-button {
   margin-top: 1em;
+}
+
+/* ====== MY PETS PAGE ====== */
+.head-greeting-container {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#greeting {
+  font-size: 60px;
+}
+
+#welcome {
+  font-size: 40px;
+}
+
+.mypets-head-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recent-container {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  margin-right: 50px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #d3d3d3;
+}
+
+.recent-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.recent-cards {
+  padding: 15px;
+  margin: 15px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.pets-container {
+  padding: 20px;
+  padding-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  margin: 30px;
+  margin-top: 80px;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: #d3d3d3;
+}
+
+#mypets-header {
+  margin-bottom: 10px;
+}
+
+.mypets-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+}
+
+.mypets-card {
+  border-radius: 20px;
+  max-width: 200px;
+  padding: 20px;
+  margin: 20px;
+  padding-bottom: 5px;
+  text-align: center;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  cursor: pointer;
+}
+
+.mypets-card:hover {
+  background-color: #f5f7f0;
+}
+
+#plus-sign {
+  font-size: 40px;
+}
+
+.option-link {
+  color: black;
+  font-size: 20px;
+}
+
+.option {
+  text-align: right;
 }
 
 /* ====== FOOTER ====== */
@@ -266,6 +421,7 @@ footer {
 .brand a:hover {
   color: #f5f7f0;
 }
+
 svg {
   width: 50px;
   height: 30px;
