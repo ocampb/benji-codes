@@ -67,11 +67,28 @@ router.get("/mypets", async function (req, res, next) {
     return medication;
   });
 
+  const RecentEnrichment = await Enrichment.findAll({
+    order: [["createdAt", "DESC"]],
+    where: {
+      PetId: { [Op.in]: PetIds },
+    },
+    limit: 4,
+  });
+
+  RecentEnrichmentWithPetName = RecentEnrichment.map((enrichment) => {
+    const matchingPet = PetsFromId.find((pet) => enrichment.PetId === pet.id);
+
+    enrichment.pet_name = matchingPet.name;
+
+    return enrichment;
+  });
+
   res.render("mypets", {
     locals: {
       name: CurrentUser.name,
       allpets: PetsFromId,
       RecentMedication: RecentMedication,
+      RecentEnrichment: RecentEnrichment,
     },
   });
 });
