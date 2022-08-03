@@ -42,14 +42,14 @@
     </header>
 
     <main>
-      <h1>Benji's Profile</h1>
+      <h1>${pet.name}'s Profile</h1>
       <div class="main-profile-container">
         <div class="profile-container">
           <div>image</div>
           <div>
-            <h3>Benji</h3>
-            <p>Bearded Dragon</p>
-            <p>3 years 3 months</p>
+            <h3>${pet.name}</h3>
+            <p>${pet.species}</p>
+            <p>${pet.birthday}</p>
           </div>
         </div>
         <div class="event-container">
@@ -72,177 +72,57 @@
       </div>
 
       <div class="tabcontent" id="Medication">
+        ${RecentMedication.map(med => { return `
         <div class="profile-card">
           <div class="glyph-container">
             <!-- <div class="glyph">Glyph</div> -->
             <div class="description-container">
-              <h3>Medication Name</h3>
-              <p>Date administered</p>
+              <h3>${med.name}</h3>
+              <p>${med.date_administered}</p>
               <div class="option">
                 <a href="#" class="option-link">...</a>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="profile-card">
-          <div class="glyph-container">
-            <!-- <div class="glyph">Glyph</div> -->
-            <div class="description-container">
-              <h3>Medication Name</h3>
-              <p>Date administered</p>
-              <div class="option">
-                <a href="#" class="option-link">...</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="profile-card">
-          <div class="glyph-container">
-            <!-- <div class="glyph">Glyph</div> -->
-            <div class="description-container">
-              <h3>Medication Name</h3>
-              <p>Date administered</p>
-              <div class="option">
-                <a href="#" class="option-link">...</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="profile-card">
-          <div class="glyph-container">
-            <!-- <div class="glyph">Glyph</div> -->
-            <div class="description-container">
-              <h3>Medication Name</h3>
-              <p>Date administered</p>
-              <div class="option">
-                <a href="#" class="option-link">...</a>
-              </div>
-            </div>
-          </div>
-        </div>
+        ` }).join('')}
       </div>
 
       <div class="tabcontent" id="Vet Visits">
+        ${Recent_Vet_Visit.map(vet => { return `
         <div class="profile-card">
           <div class="glyph-container">
             <!-- <div class="glyph">Glyph</div> -->
             <div class="description-container">
-              <h3>Vet Hospital</h3>
-              <p>Date of visit</p>
-              <p>Reason: lorem ipsum blah blah</p>
-              <p>Notes: Make sure to give 2 pills a day</p>
+              <h3>${vet.vet_name}</h3>
+              <p>${vet.date_of_visit}</p>
+              <p>${vet.reason}</p>
+              <p>${vet.notes}</p>
               <div class="option">
                 <a href="#" class="option-link">...</a>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="profile-card">
-          <div class="glyph-container">
-            <!-- <div class="glyph">Glyph</div> -->
-            <div class="description-container">
-              <h3>Vet Hospital</h3>
-              <p>Date of visit</p>
-              <p>Reason: lorem ipsum blah blah</p>
-              <p>Notes: Make sure to give 2 pills a day</p>
-              <div class="option">
-                <a href="#" class="option-link">...</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="profile-card">
-          <div class="glyph-container">
-            <!-- <div class="glyph">Glyph</div> -->
-            <div class="description-container">
-              <h3>Vet Hospital</h3>
-              <p>Date of visit</p>
-              <p>Reason: lorem ipsum blah blah</p>
-              <p>Notes: Make sure to give 2 pills a day</p>
-              <div class="option">
-                <a href="#" class="option-link">...</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="profile-card">
-          <div class="glyph-container">
-            <!-- <div class="glyph">Glyph</div> -->
-            <div class="description-container">
-              <h3>Vet Hospital</h3>
-              <p>Date of visit</p>
-              <p>Reason: lorem ipsum blah blah</p>
-              <p>Notes: Make sure to give 2 pills a day</p>
-              <div class="option">
-                <a href="#" class="option-link">...</a>
-              </div>
-            </div>
-          </div>
-        </div>
+        ` }).join('')}
       </div>
 
       <div class="tabcontent" id="Enrichment">
+        ${RecentEnrichment.map(activity => { return `
         <div class="profile-card">
           <div class="glyph-container">
             <!-- <div class="glyph">Glyph</div> -->
             <div class="description-container">
-              <h3>Play time with Benji</h3>
-              <p>Time: 1 hour</p>
-              <p>Notes: He loves shiny things</p>
+              <h3>${activity.type}</h3>
+              <p>${activity.duration}</p>
+              <p>${activity.notes}</p>
               <div class="option">
                 <a href="#" class="option-link">...</a>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="profile-card">
-          <div class="glyph-container">
-            <!-- <div class="glyph">Glyph</div> -->
-            <div class="description-container">
-              <h3>Play time with Benji</h3>
-              <p>Time: 1 hour</p>
-              <p>Notes: He loves shiny things</p>
-              <div class="option">
-                <a href="#" class="option-link">...</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="profile-card">
-          <div class="glyph-container">
-            <!-- <div class="glyph">Glyph</div> -->
-            <div class="description-container">
-              <h3>Play time with Benji</h3>
-              <p>Time: 1 hour</p>
-              <p>Notes: He loves shiny things</p>
-              <div class="option">
-                <a href="#" class="option-link">...</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="profile-card">
-          <div class="glyph-container">
-            <!-- <div class="glyph">Glyph</div> -->
-            <div class="description-container">
-              <h3>Play time with Benji</h3>
-              <p>Time: 1 hour</p>
-              <p>Notes: He loves shiny things</p>
-              <div class="option">
-                <a href="#" class="option-link">...</a>
-              </div>
-            </div>
-          </div>
-        </div>
+        ` }).join('')}
       </div>
     </main>
 
