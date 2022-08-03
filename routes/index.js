@@ -1,7 +1,14 @@
 var express = require("express");
 var router = express.Router();
 var app = express();
-const { Users, Pet_Owners, Pets, Medication } = require("../models");
+const {
+  Users,
+  Pet_Owners,
+  Pets,
+  Medication,
+  Enrichment,
+  Veterinary_Visits,
+} = require("../models");
 const { Op } = require("sequelize");
 
 /* GET home page. */
@@ -81,31 +88,41 @@ router.get("/petprofile/:PetId", async function (req, res, next) {
   const CurrentUser = await Users.findOne({
     where: { id: req.session.userId },
   });
-  const mypets = await Pet_Owners.findAll({
+  const myPetOwnerRecord = await Pet_Owners.findOne({
     where: { UserId: req.session.userId, PetId: req.params.PetId },
   });
-  console.log("mypets");
-  console.log(mypets);
-  const pets_function = function (mypets1) {
-    return mypets1.PetId;
-  };
-  const PetIds = mypets.map(pets_function);
-  // PetIds is an array returned with just the IDs of each pet associated with the current user
-  const PetsFromId = await Pets.findAll({
-    where: {
-      id: { [Op.in]: PetIds },
-    },
+  const myPet = await Pets.findOne({
+    where: { id: req.params.PetId },
   });
-  console.log("pets from id");
-  console.log(PetsFromId);
+
+  const PetId = req.params.PetId;
 
   const RecentMedication = await Medication.findAll({
     order: [["createdAt", "DESC"]],
     where: {
-      PetId: { [Op.in]: PetIds },
+      PetId: PetId,
     },
   });
-  res.render("petprofile", { title: "Express" });
+  const RecentEnrichment = await Enrichment.findAll({
+    order: [["createdAt", "DESC"]],
+    where: {
+      PetId: PetId,
+    },
+  });
+  const Recent_Vet_Visit = await Veterinary_Visits.findAll({
+    order: [["createdAt", "DESC"]],
+    where: {
+      PetId: PetId,
+    },
+  });
+  res.render("petprofile", {
+    locals: {
+      pet: myPet,
+      RecentMedication: RecentMedication,
+      RecentEnrichment: RecentEnrichment,
+      Recent_Vet_Visit: Recent_Vet_Visit,
+    },
+  });
 });
 
 module.exports = router;
