@@ -465,6 +465,28 @@ main > h1 {
   flex-direction: column;
 }
 
+/* ====== ADD PETS PAGE ====== */
+.add-container {
+  width: 100vw;
+  height: 100vh;
+  /* display: block; */
+  object-fit: cover;
+  object-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(198, 198, 198);
+}
+
+#petspecies {
+  padding: 1em;
+  border-radius: 3.33em;
+  margin: 8px 0;
+}
+
+/* ====== EVENT CHOICE PAGE ====== */
+
 /* ====== FOOTER ====== */
 footer {
   width: 100vw;

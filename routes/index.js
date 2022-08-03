@@ -20,6 +20,13 @@ router.get("/logout", function (req, res, next) {
   res.redirect("/");
 });
 
+// ====== Amanda's basic view routes =====
+router.get("/addpets", function (req, res, next) {
+  res.render("addpets", { title: "Express" });
+});
+
+// ============
+
 // Sign Up page
 router.get("/signup", function (req, res, next) {
   res.render("signup", { title: "Express" });
