@@ -175,7 +175,7 @@ input {
   background-color: white;
   color: black;
   padding: 1.6em 6em;
-  margin: 0 40px 0 40px;
+  margin: 18.72px 40px 0 40px;
   /* display: block; */
   cursor: pointer;
   border-radius: 3.33em;
@@ -260,10 +260,12 @@ input {
 
 #greeting {
   font-size: 60px;
+  margin-left: 20px;
 }
 
 #welcome {
   font-size: 40px;
+  margin-left: 20px;
 }
 
 .mypets-head-container {
@@ -367,7 +369,7 @@ main > h1 {
   background-color: #f1f1f1;
   margin: 20px;
   padding: 20px;
-  width: 50vw;
+  min-width: 485px;
 }
 
 .profile-container > div:nth-child(1) {
@@ -384,7 +386,7 @@ main > h1 {
   background-color: #f1f1f1;
   margin: 20px;
   padding: 20px;
-  width: 215.85px;
+  min-width: 155px;
   justify-content: center;
   text-align: center;
 }
@@ -440,13 +442,12 @@ main > h1 {
   padding: 20px;
   margin: 20px;
   margin-left: 40px;
-  /* margin-left: 60px; */
   margin-right: 40px;
   background-color: white;
   display: flex;
   flex-direction: column;
   color: black;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .glyph-container {
@@ -618,10 +619,16 @@ svg:hover {
     margin-left: 50px;
   }
 
-  /* bug: at this size (752px), glyph image is not going away because of javascript sheet overriding display to flex and will not change it to none at a certain size. Commented out glyph image in mean time in case it's not necessary to have */
-  /* .glyph {
-    display: none;
-  } */
+  /* Pet Profile */
+  .main-profile-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 550px) {
+  .profile-container {
+    min-width: 320px;
+  }
 }
 
 @media (max-width: 480px) {
