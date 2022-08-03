@@ -27,8 +27,9 @@
       <nav class="navbar">
         <a href="#" class="nav-branding">BenjiCodes</a>
         <ul class="nav-menu">
-          <li class="nav-item"><a href="#" class="nav-link">Sign Up</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+          <li class="nav-item">
+            <a href="/logout" class="nav-link">Logout</a>
+          </li>
         </ul>
 
         <div class="hamburger">
@@ -46,25 +47,16 @@
           <p id="welcome">Welcome to your pets dashboard.</p>
         </div>
         <div class="recent-container">
-          <h2>Recent Events</h2>
+          <h2>Recent Medications</h2>
           <div class="recent-grid">
             <!-- Recent Event Cards -->
+            ${RecentMedication.map(med => { return `
             <div class="recent-cards">
-              <h3>Vet Visit</h3>
-              <p>Date</p>
+              <h3>${med.name}</h3>
+              <p>${med.pet_name}</p>
+              <p>${med.date_administered}</p>
             </div>
-            <div class="recent-cards">
-              <h3>Medication</h3>
-              <p>Date</p>
-            </div>
-            <div class="recent-cards">
-              <h3>Enrichment</h3>
-              <p>Date</p>
-            </div>
-            <div class="recent-cards">
-              <h3>Vet Visit</h3>
-              <p>Date</p>
-            </div>
+            ` }).join('')}
           </div>
         </div>
       </div>
