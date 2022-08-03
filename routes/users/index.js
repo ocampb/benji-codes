@@ -18,7 +18,7 @@ router.post("/create_user", async (req, res) => {
     console.log(encryptedUser);
     const createUser = await Users.create(encryptedUser);
     console.log(createUser);
-    res.send(createUser);
+    res.redirect("/mypets");
   } catch (error) {
     console.log(error);
     res.send(error);
@@ -40,6 +40,13 @@ router.post("/login", async (req, res) => {
   } else {
     res.redirect("/");
   }
+});
+
+router.get("/guest_login", async (req, res) => {
+  const databaseentry = await Users.findOne({ where: { username: "Guest" } });
+
+  req.session.userId = databaseentry.id;
+  res.redirect("/mypets");
 });
 
 router.get("/test", (req, res) => {
