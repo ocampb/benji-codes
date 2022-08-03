@@ -22,7 +22,6 @@ main {
 
 h1 {
   font-family: "Varela Round", sans-serif;
-  /* font-size: clamp(3rem, 1rem + 10vw, 5rem); */
 }
 
 h2 {
@@ -85,51 +84,11 @@ a {
   background-color: white;
 }
 
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active .bar:nth-child(1) {
-    opacity: 1;
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .hamburger.active .bar:nth-child(3) {
-    opacity: 1;
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  .nav-menu {
-    position: fixed;
-    left: 100%;
-    top: 70px;
-    gap: 0;
-    flex-direction: column;
-    background-color: #262626;
-    width: 100%;
-    text-align: center;
-    transition: 0.3s;
-  }
-
-  .nav-item {
-    margin: 16px 0;
-  }
-
-  .nav-menu.active {
-    left: 0;
-  }
-}
-
 /* ====== LANDING PAGE ====== */
 #hero-image {
   min-height: 100vh;
   width: 100vw;
-  height: 944px;
+  /* height: 944px; */
   /* background-image: url();
   background-repeat: no-repeat;
   background-size: cover;
@@ -155,12 +114,14 @@ a {
   margin-left: 20%;
   margin-right: 20%;
   margin-top: 0;
-  font-size: 80px;
+  /* font-size: 80px; */
+  font-size: clamp(1rem, 1rem + 10vw, 5rem);
 }
 
 #hero-description {
-  font-size: 30px;
+  /* font-size: 30px; */
   font-family: Glegoo, serif;
+  font-size: clamp(1rem, 0.5rem + 3vw, 1.8rem);
 }
 
 #landing-button {
@@ -205,9 +166,25 @@ a {
 
 input {
   padding: 1em;
-  margin: 0.6em 0.6em 0.6em 0.6em;
+  margin: 0.6em 0em 0.6em 0em;
   border-radius: 3.33em;
   border: none;
+}
+
+#login-button {
+  background-color: white;
+  color: black;
+  padding: 1.6em 6em;
+  margin: 0 40px 0 40px;
+  /* display: block; */
+  cursor: pointer;
+  border-radius: 3.33em;
+  transition: 0.3s ease;
+}
+
+#login-button:hover {
+  background-color: black;
+  color: white;
 }
 
 .right {
@@ -262,6 +239,10 @@ input {
 .right-link:hover {
   color: rgb(117, 117, 117);
   text-decoration: underline;
+}
+
+#guest-align {
+  text-align: center;
 }
 
 /* ====== SIGNUP PAGE ====== */
@@ -334,6 +315,8 @@ input {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
 .mypets-card {
@@ -375,11 +358,11 @@ main > h1 {
 .main-profile-container {
   display: flex;
   width: 50vw;
+  margin-bottom: 50px;
 }
 
 .profile-container {
   display: flex;
-  /* border: 2px solid black; */
   border-radius: 20px;
   background-color: #f1f1f1;
   margin: 20px;
@@ -388,7 +371,6 @@ main > h1 {
 }
 
 .profile-container > div:nth-child(1) {
-  /* border: 2px solid black; */
   border-radius: 20px;
   background-color: #fff;
   padding: 50px;
@@ -402,8 +384,7 @@ main > h1 {
   background-color: #f1f1f1;
   margin: 20px;
   padding: 20px;
-  width: 10vw;
-  height: 20vh;
+  width: 215.85px;
   justify-content: center;
   text-align: center;
 }
@@ -455,15 +436,19 @@ main > h1 {
 
 .profile-card {
   border-radius: 20px;
-  max-width: 30vw;
+  /* max-width: 30vw; */
   padding: 20px;
   margin: 20px;
+  margin-left: 40px;
+  /* margin-left: 60px; */
+  margin-right: 40px;
   background-color: white;
   display: flex;
   flex-direction: column;
   color: black;
   cursor: pointer;
 }
+
 .glyph-container {
   display: flex;
 }
@@ -548,4 +533,111 @@ svg:hover {
 
 .copyright a {
   text-decoration: none;
+}
+
+/* ====== MEDIA QUERIES ====== */
+@media (max-width: 950px) {
+  /* Login page */
+  .containerHome {
+    flex-direction: column;
+  }
+
+  .left {
+    width: 100vw;
+  }
+
+  .right {
+    width: 100vw;
+  }
+
+  /* My Pets */
+  .mypets-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 752px) {
+  /* Navbar */
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    opacity: 1;
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    opacity: 1;
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: 100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #262626;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  /* Header */
+  #hero-header {
+    font-size: clamp(1rem, 4rem, 5rem);
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  #landing-button {
+    margin-left: 27%;
+    margin-right: 27%;
+    font-size: 12px;
+  }
+
+  /* My Pets */
+  .mypets-head-container {
+    display: block;
+  }
+
+  .recent-container {
+    margin-left: 50px;
+  }
+
+  /* bug: at this size (752px), glyph image is not going away because of javascript sheet overriding display to flex and will not change it to none at a certain size. Commented out glyph image in mean time in case it's not necessary to have */
+  /* .glyph {
+    display: none;
+  } */
+}
+
+@media (max-width: 480px) {
+  #landing-button {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  /* My Pets */
+  .mypets-grid {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .recent-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
