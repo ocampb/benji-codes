@@ -28,3 +28,16 @@ const openTab = (e, name) => {
   document.getElementById(name).style.flexWrap = "wrap";
   e.currentTarget.className += " active";
 };
+
+const mypetsContainer = document.querySelector(".mypets-grid");
+
+if (mypetsContainer && mypetsContainer.children) {
+  mypetsContainer.lastElementChild;
+  for (let pet of mypetsContainer.children) {
+    if (pet !== mypetsContainer.lastElementChild) {
+      pet.addEventListener("click", () => {
+        window.location.href = "/petprofile/" + pet.dataset.petId;
+      });
+    }
+  }
+}

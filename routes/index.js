@@ -27,7 +27,7 @@ router.get("/signup", function (req, res, next) {
 
 // My Pets page
 router.get("/mypets", async function (req, res, next) {
-  const user1 = await Users.findOne({
+  const CurrentUser = await Users.findOne({
     where: { id: req.session.userId },
   });
   const mypets = await Pet_Owners.findAll({
@@ -62,7 +62,7 @@ router.get("/mypets", async function (req, res, next) {
 
   res.render("mypets", {
     locals: {
-      name: user1.name,
+      name: CurrentUser.name,
       allpets: PetsFromId,
       RecentMedication: RecentMedication,
     },
@@ -70,7 +70,34 @@ router.get("/mypets", async function (req, res, next) {
 });
 
 // Pet Profile page
-router.get("/petprofile", function (req, res, next) {
+router.get("/petprofile/:PetId", async function (req, res, next) {
+  const CurrentUser = await Users.findOne({
+    where: { id: req.session.userId },
+  });
+  const mypets = await Pet_Owners.findAll({
+    where: { UserId: req.session.userId, PetId: req.params.PetId },
+  });
+  console.log("mypets");
+  console.log(mypets);
+  const pets_function = function (mypets1) {
+    return mypets1.PetId;
+  };
+  const PetIds = mypets.map(pets_function);
+  // PetIds is an array returned with just the IDs of each pet associated with the current user
+  const PetsFromId = await Pets.findAll({
+    where: {
+      id: { [Op.in]: PetIds },
+    },
+  });
+  console.log("pets from id");
+  console.log(PetsFromId);
+
+  const RecentMedication = await Medication.findAll({
+    order: [["createdAt", "DESC"]],
+    where: {
+      PetId: { [Op.in]: PetIds },
+    },
+  });
   res.render("petprofile", { title: "Express" });
 });
 

@@ -27,6 +27,19 @@ router.post("/create_pets", async (req, res) => {
   }
 });
 
+router.get("/get_pet_by_id/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const OnePet = await Pets.findOne({
+      where: { id: id },
+    });
+    res.send(OnePet);
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
+
 router.delete("/delete_by_id/:id", async (req, res) => {
   const { id } = req.params;
   try {

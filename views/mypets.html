@@ -65,7 +65,7 @@
         <h1 id="mypets-header">My Pets</h1>
         <div class="mypets-grid">
           ${allpets.map(pet => { return `
-          <div class="mypets-card">
+          <div class="mypets-card" data-pet-id="${pet.id}">
             <h3>${pet.name}</h3>
             <p>${pet.species}</p>
             <p>${pet.birthday}</p>
