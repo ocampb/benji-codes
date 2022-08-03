@@ -32,6 +32,21 @@ router.get("/addpets", function (req, res, next) {
   res.render("addpets", { title: "Express" });
 });
 
+router.get("/eventchoice", function (req, res, next) {
+  res.render("eventchoice", { title: "Express" });
+});
+
+router.get("/medication", function (req, res, next) {
+  res.render("medication", { title: "Express" });
+});
+
+router.get("/vet", function (req, res, next) {
+  res.render("vet", { title: "Express" });
+});
+
+router.get("/enrichment", function (req, res, next) {
+  res.render("enrichment", { title: "Express" });
+});
 // ============
 
 // Sign Up page

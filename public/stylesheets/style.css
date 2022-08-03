@@ -483,6 +483,12 @@ main > h1 {
   padding: 1em;
   border-radius: 3.33em;
   margin: 8px 0;
+  border: none;
+}
+
+textarea {
+  border: none;
+  font-family: "Hind Siliguri", sans-serif;
 }
 
 /* ====== EVENT CHOICE PAGE ====== */
