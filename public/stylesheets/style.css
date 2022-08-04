@@ -84,11 +84,14 @@ a {
 }
 
 .nav-link {
-  transition: 0.3s ease;
+  /* transition: 0.3s ease; */
+  padding: 10px;
+  /* border-radius: 20px; */
 }
 
 .nav-link:hover {
-  color: #8a8a8a;
+  /* color: #8a8a8a; */
+  border-bottom: 1px solid #fffcf9;
 }
 
 .hamburger {
