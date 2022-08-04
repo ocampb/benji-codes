@@ -174,3 +174,36 @@ if (createEnrichmentForm) {
     createEnrichmentForm.getAttribute("action") + "/" + petId
   );
 }
+
+const pet_profile_pencil = document.getElementById("pet-profile-pencil");
+const profile_container = document.getElementById("profile_container");
+
+if (pet_profile_pencil) {
+  pet_profile_pencil.addEventListener("click", () => {
+    document.getElementById("profile_container").style.display = "none";
+    document.getElementById("edit_container").style.display = "block";
+  });
+}
+
+const login_button = document.getElementById("login-button");
+petNameUpdate = document.getElementById("petnameupdate");
+
+const updatePetNameDB = (petId) => {
+  event.stopPropagation();
+  const newPetName = petNameUpdate.value;
+  fetch("/pets/update_pet/" + petId, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ name: newPetName }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Success:", data);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+  window.location.href = "/petprofile";
+};
