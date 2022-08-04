@@ -19,7 +19,7 @@
       type="text/css"
       href="./stylesheets/style.css"
     />
-    <!-- <script defer src="./app.js"></script> -->
+    <script defer src="./app.js"></script>
     <title>Benji Codes</title>
   </head>
   <body>
@@ -34,10 +34,32 @@
       <div class="containerHome" id="button-travel">
         <div class="left">
           <h1 class="heading-style">Create Your Account</h1>
-          <form action="/users/create_user" method="post" class="form-style">
-            <input type="text" name="name" placeholder="Name" />
-            <input type="text" name="username" placeholder="Username" />
-            <input type="password" name="password" placeholder="Password" />
+          <form
+            action="/users/create_user"
+            method="post"
+            class="form-style"
+            id="form"
+          >
+            <input type="text" name="name" placeholder="Name" id="name" />
+            <small id="smallname">Error message</small>
+
+            <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              id="username"
+            />
+            <small id="smallusername">Error message</small>
+
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              id="password"
+              autocomplete="on"
+            />
+            <small id="smallpassword">Error message</small>
+
             <div id="guest-align">
               <a href="/users/guest_login" class="right-link"
                 >Continue as guest</a

@@ -250,6 +250,25 @@ input {
   margin-top: 1em;
 }
 
+small {
+  text-align: center;
+  visibility: hidden;
+}
+
+.success {
+  border: 2px solid rgb(9, 174, 9);
+}
+
+.error {
+  border: 2px solid red;
+  visibility: visible;
+}
+
+.mess-error {
+  color: red;
+  visibility: visible;
+}
+
 /* ====== MY PETS PAGE ====== */
 .head-greeting-container {
   margin: 30px;
