@@ -102,7 +102,11 @@ const loginSignupCheck = document.querySelector(".left");
 if (loginSignupCheck) {
   form.addEventListener("submit", (e) => {
     checkInputs();
-    if (username.classList == "error" || password.classList == "error") {
+    if (
+      username.classList == "error" ||
+      password.classList == "error" ||
+      nameval.classList == "error"
+    ) {
       e.preventDefault();
     }
   });
