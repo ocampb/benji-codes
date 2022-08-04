@@ -107,15 +107,7 @@ if (loginSignupCheck) {
   });
 }
 
-// ====== Pet Profile Page ======
-const add_event = document.getElementById("add_event");
-
-if (add_event) {
-  add_event.addEventListener("click", () => {
-    window.location.href = "/eventchoice.html";
-  });
-}
-
+// ====== My Pets Dashboard Page ======
 const deletePet = (petId) => {
   event.stopPropagation();
   fetch("/pets/delete_by_id/" + petId, {
@@ -134,3 +126,12 @@ const deletePet = (petId) => {
   console.log("delete pet with id " + petId);
   window.location.href = "/mypets";
 };
+
+// ====== Pet Profile Page ======
+const add_event = document.getElementById("add_event");
+
+if (add_event) {
+  add_event.addEventListener("click", () => {
+    window.location.href = "/eventchoice.html";
+  });
+}
