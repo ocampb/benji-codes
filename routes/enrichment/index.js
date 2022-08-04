@@ -5,18 +5,19 @@ var router = express.Router();
 router.post("/create_enrichment", async (req, res) => {
   const { type, duration, notes, PetId } = req.body;
   try {
+    const PetId = req.session.PetId;
     const NewEnrichment = {
       type: type,
       duration: duration,
       notes: notes,
       createdAt: new Date(),
       updatedAt: new Date(),
-      PetId: PetId,
+      PetId: req.session.PetId,
     };
     console.log(NewEnrichment);
     const NewEnrichment1 = await Enrichment.create(NewEnrichment);
     console.log(NewEnrichment1);
-    res.send(NewEnrichment1);
+    res.redirect("/petprofile/" + req.params.petId);
   } catch (error) {
     console.log(error);
     res.send(error);
