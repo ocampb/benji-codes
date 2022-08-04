@@ -29,6 +29,7 @@ const openTab = (e, name) => {
   e.currentTarget.className += " active";
 };
 
+// ====== Generating Pets on Pets Dashboard ======
 const mypetsContainer = document.querySelector(".mypets-grid");
 
 if (mypetsContainer && mypetsContainer.children) {
@@ -38,6 +39,19 @@ if (mypetsContainer && mypetsContainer.children) {
       pet.addEventListener("click", () => {
         window.location.href = "/petprofile/" + pet.dataset.petId;
       });
+    } else {
+      pet.addEventListener("click", () => {
+        window.location.href = "/addpets.html";
+      });
     }
   }
+}
+
+// ====== Pet Profile Page ======
+const add_event = document.getElementById("add_event");
+
+if (add_event) {
+  add_event.addEventListener("click", () => {
+    window.location.href = "/eventchoice.html";
+  });
 }

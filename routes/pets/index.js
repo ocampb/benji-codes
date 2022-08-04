@@ -20,7 +20,7 @@ router.post("/create_pets", async (req, res) => {
       PetId: newPet1.dataValues.id,
     });
     console.log(newPet1);
-    res.send(newPet1);
+    res.redirect("/mypets");
   } catch (error) {
     console.log(error);
     res.send(error);
