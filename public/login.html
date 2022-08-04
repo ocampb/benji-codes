@@ -19,6 +19,7 @@
       type="text/css"
       href="./stylesheets/style.css"
     />
+    <script defer src="./app.js"></script>
     <title>Benji Codes</title>
   </head>
   <body>
@@ -33,9 +34,29 @@
       <div class="containerHome" id="button-travel">
         <div class="left">
           <h1 class="heading-style">Login To Your Account</h1>
-          <form action="/users/login" method="post" class="form-style">
-            <input type="text" name="username" placeholder="Username" />
-            <input type="password" name="password" placeholder="Password" />
+          <form
+            action="/users/login"
+            method="post"
+            class="form-style"
+            id="form"
+          >
+            <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              id="username"
+            />
+            <small id="smallusername">Error message</small>
+
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              id="password"
+              autocomplete="on"
+            />
+            <small id="smallpassword">Error message</small>
+
             <input
               class="button-style"
               type="submit"
