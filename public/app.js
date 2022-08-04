@@ -132,6 +132,41 @@ const add_event = document.getElementById("add_event");
 
 if (add_event) {
   add_event.addEventListener("click", () => {
-    window.location.href = "/eventchoice.html";
+    const petId = window.location.href.slice(
+      window.location.href.lastIndexOf("/") + 1
+    );
+    window.location.href = "/eventchoice.html" + "?petId=" + petId;
   });
+}
+
+const eventChoiceContainer = document.querySelector(".event-choice-container");
+
+if (eventChoiceContainer && eventChoiceContainer.children) {
+  const petId = Object.fromEntries(new URLSearchParams(location.search)).petId;
+  for (let element of eventChoiceContainer.children) {
+    element.setAttribute(
+      "href",
+      element.getAttribute("href") + "?petId=" + petId
+    );
+  }
+}
+
+const createMedicationForm = document.querySelector("#create_medication_form");
+
+if (createMedicationForm) {
+  const petId = Object.fromEntries(new URLSearchParams(location.search)).petId;
+  createMedicationForm.setAttribute(
+    "action",
+    createMedicationForm.getAttribute("action") + "/" + petId
+  );
+}
+
+const createEnrichmentForm = document.querySelector("#create_enrichment_form");
+
+if (createEnrichmentForm) {
+  const petId = Object.fromEntries(new URLSearchParams(location.search)).petId;
+  createEnrichmentForm.setAttribute(
+    "action",
+    createEnrichmentForm.getAttribute("action") + "/" + petId
+  );
 }

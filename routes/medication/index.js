@@ -2,21 +2,23 @@ const { Medication } = require("../../models");
 var express = require("express");
 var router = express.Router();
 
-router.post("/create_medication", async (req, res) => {
-  const { name, dosage, date_administered, PetId } = req.body;
+router.post("/create_medication/:petId", async (req, res) => {
+  const { name, dosage, date_administered } = req.body;
   try {
+    const PetId = req.session.PetId;
     const NewMedication = {
       name: name,
       dosage: dosage,
       date_administered: date_administered,
       createdAt: new Date(),
       updatedAt: new Date(),
-      PetId: PetId,
+      PetId: req.params.petId,
     };
     console.log(NewMedication);
     const NewMedication1 = await Medication.create(NewMedication);
     console.log(NewMedication1);
-    res.send(NewMedication1);
+
+    res.redirect("/petprofile/" + req.params.petId);
   } catch (error) {
     console.log(error);
     res.send(error);
