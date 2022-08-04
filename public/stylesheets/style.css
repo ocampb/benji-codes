@@ -32,6 +32,7 @@ h2 {
 /* ====== NAVBAR ====== */
 header {
   background-color: #262626;
+  width: 100vw;
 }
 
 li {
@@ -39,7 +40,7 @@ li {
 }
 
 a {
-  color: white;
+  color: #262322;
   text-decoration: none;
 }
 
@@ -51,6 +52,21 @@ a {
   padding: 0 24px;
 }
 
+.landing-nav {
+  background-color: transparent;
+  position: absolute;
+  width: 100vw;
+}
+
+.nav-and-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-signup-nav {
+  max-width: 70vw;
+}
+
 .nav-menu {
   display: flex;
   justify-content: space-between;
@@ -60,6 +76,11 @@ a {
 
 .nav-branding {
   font-size: 2rem;
+}
+
+.login-brand {
+  color: #262322;
+  margin-bottom: 40px;
 }
 
 .nav-link {
@@ -149,7 +170,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgb(198, 198, 198);
+  background-color: #fffcf9;
 }
 
 .form-style {
@@ -168,12 +189,13 @@ input {
   padding: 1em;
   margin: 0.6em 0em 0.6em 0em;
   border-radius: 3.33em;
-  border: none;
+  border: 1px solid #e0e0e5;
+  background-color: #fffcf9;
 }
 
 #login-button {
-  background-color: white;
-  color: black;
+  background-color: #7e2ec6;
+  color: white;
   padding: 1.6em 6em;
   margin: 18.72px 40px 0 40px;
   /* display: block; */
@@ -183,8 +205,9 @@ input {
 }
 
 #login-button:hover {
-  background-color: black;
-  color: white;
+  background-color: transparent;
+  border: 1px solid #7e2ec6;
+  color: #7e2ec6;
 }
 
 .right {
@@ -193,8 +216,8 @@ input {
   align-items: center;
   justify-content: center;
   width: 30vw;
-  height: 100vh;
-  background-color: lightgray;
+  height: 113vh;
+  background-color: #7e2ec6;
 }
 
 .right-container {
@@ -207,12 +230,14 @@ input {
 
 .right-heading-style {
   font-size: 34px;
+  color: #fffcf9;
 }
 
 .right-description {
   padding: 1em;
   margin-left: 5em;
   margin-right: 5em;
+  color: #fffcf9;
 }
 
 .button-style {
@@ -256,11 +281,11 @@ small {
 }
 
 .success {
-  border: 2px solid rgb(9, 174, 9);
+  border: 1px solid rgb(9, 174, 9);
 }
 
 .error {
-  border: 2px solid red;
+  border: 1px solid red;
   visibility: visible;
 }
 
