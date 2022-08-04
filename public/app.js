@@ -55,3 +55,12 @@ if (add_event) {
     window.location.href = "/eventchoice.html";
   });
 }
+
+// <div id="trash" data-pet-id="${pet.id}"
+
+// onclick
+
+/*
+ fetch('/pets/:id', { method: 'DELETE' })
+
+*/
