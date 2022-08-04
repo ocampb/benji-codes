@@ -27,6 +27,7 @@ h1 {
 h2 {
   /* font-family: "Glegoo", serif; */
   text-align: center;
+  color: #fffcf9;
 }
 
 /* ====== NAVBAR ====== */
@@ -56,6 +57,18 @@ a {
   background-color: transparent;
   position: absolute;
   width: 100vw;
+}
+
+.alt-nav {
+  background-color: transparent;
+}
+
+.alt-nav-brand {
+  color: #262322;
+}
+
+.alt-nav-link {
+  color: #262322;
 }
 
 .nav-and-left {
@@ -200,7 +213,7 @@ input {
   margin: 0.6em 0em 0.6em 0em;
   border-radius: 3.33em;
   border: 1px solid #e0e0e5;
-  background-color: #fffcf9;
+  background-color: transparent;
 }
 
 #login-button {
@@ -227,7 +240,13 @@ input {
   justify-content: center;
   width: 30vw;
   height: 113vh;
-  background-color: #7e2ec6;
+  /* background-color: #7e2ec6; */
+  background: rgb(59, 0, 134);
+  background: linear-gradient(
+    18deg,
+    rgba(59, 0, 134, 1) 0%,
+    rgba(162, 58, 255, 1) 100%
+  );
 }
 
 .right-container {
@@ -333,8 +352,8 @@ small {
   margin: 30px;
   margin-right: 50px;
   padding: 20px;
-  border-radius: 20px;
-  background-color: #d3d3d3;
+  border-radius: 15px;
+  background-color: #7e2ec6;
 }
 
 .recent-grid {
@@ -345,8 +364,8 @@ small {
 .recent-cards {
   padding: 15px;
   margin: 15px;
-  background-color: white;
-  border-radius: 20px;
+  background-color: #fffcf9;
+  border-radius: 15px;
 }
 
 .pets-container {
@@ -355,16 +374,17 @@ small {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 20px;
+  border-radius: 15px;
   margin: 30px;
   margin-top: 80px;
   margin-left: 50px;
   margin-right: 50px;
-  background-color: #d3d3d3;
+  background-color: #7e2ec6;
 }
 
 #mypets-header {
   margin-bottom: 10px;
+  color: #fffcf9;
 }
 
 .mypets-grid {
@@ -376,21 +396,22 @@ small {
 }
 
 .mypets-card {
-  border-radius: 20px;
+  border-radius: 15px;
   max-width: 200px;
   padding: 20px;
   margin: 20px;
   padding-bottom: 5px;
   text-align: center;
-  background-color: white;
+  background-color: #fffcf9;
   display: flex;
   flex-direction: column;
-  color: black;
+  color: #262322;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .mypets-card:hover {
-  background-color: #f5f7f0;
+  transform: translateY(-10px);
 }
 
 #plus-sign {
@@ -408,7 +429,7 @@ small {
 }
 
 .option-link {
-  color: black;
+  color: #262322;
   font-size: 20px;
 }
 
@@ -430,7 +451,7 @@ main > h1 {
 .profile-container {
   display: flex;
   border-radius: 20px;
-  background-color: #f1f1f1;
+  background-color: #fffcf9;
   margin: 20px;
   padding: 20px;
   min-width: 485px;
@@ -438,7 +459,7 @@ main > h1 {
 
 .profile-container > div:nth-child(1) {
   border-radius: 20px;
-  background-color: #fff;
+  background-color: #fffcf9;
   padding: 50px;
   margin-right: 20px;
 }
@@ -447,7 +468,7 @@ main > h1 {
   display: flex;
   flex-direction: column;
   border-radius: 20px;
-  background-color: #f1f1f1;
+  background-color: #fffcf9;
   margin: 20px;
   padding: 20px;
   min-width: 155px;
@@ -463,7 +484,7 @@ main > h1 {
 /* Tab navigation */
 .tab {
   overflow: hidden;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #262322;
   margin: 0 10vw 0 10vw;
   display: flex;
   justify-content: space-around;
@@ -478,7 +499,7 @@ main > h1 {
   padding: 14px 16px;
   transition: 0.3s ease;
   font-size: 17px;
-  color: black;
+  color: #262322;
   width: 100%;
   text-align: center;
 }
@@ -519,7 +540,7 @@ main > h1 {
 }
 
 .glyph {
-  border: 2px solid black;
+  border: 2px solid #262322;
   padding: 10px;
   margin: 10px;
 }
@@ -540,14 +561,14 @@ main > h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgb(198, 198, 198);
+  background-color: #fffcf9;
 }
 
 #petspecies {
   padding: 1em;
   border-radius: 3.33em;
   margin: 8px 0;
-  border: none;
+  border: 1px solid #e0e0e5;
 }
 
 textarea {
@@ -623,30 +644,36 @@ footer {
 
 .brand a {
   text-decoration: none;
-  color: #f5f7f0;
+  color: #fffcf9;
   transition: 0.3s ease;
-  margin-left: 3em;
+  /* margin-left: 3.8em; */
 }
 
 .brand a:hover {
-  color: #f5f7f0;
+  color: #fffcf9;
+}
+
+#forms-footer-brand {
+  margin: 0;
 }
 
 svg {
   width: 50px;
   height: 30px;
-  /* background-color: #fffcf9; */
-  color: #262322;
   text-decoration: none;
   transition: 0.3s ease;
 }
 
 svg:hover {
-  fill: #8b8888;
+  fill: #7e2ec6;
 }
 
 .copyright a {
   text-decoration: none;
+}
+
+.glyphs {
+  margin-right: 60px;
 }
 
 /* ====== MEDIA QUERIES ====== */
@@ -742,6 +769,12 @@ svg:hover {
   }
 }
 
+@media (max-width: 704px) {
+  .brand a {
+    margin-left: 0;
+  }
+}
+
 @media (max-width: 550px) {
   .profile-container {
     min-width: 320px;
@@ -768,9 +801,5 @@ svg:hover {
   /* Event Choice */
   #heading-choice {
     margin: 0 5vw 0 5vw;
-  }
-
-  #nav-branding a {
-    margin-left: 0;
   }
 }
