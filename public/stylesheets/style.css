@@ -118,7 +118,7 @@ a {
   height: 3px;
   margin: 5px auto;
   transition: all 0.3s ease-in-out;
-  background-color: white;
+  background-color: #262322;
 }
 
 /* ====== LANDING PAGE ====== */
@@ -225,6 +225,7 @@ input {
   cursor: pointer;
   border-radius: 3.33em;
   transition: 0.3s ease;
+  border: 1px solid #fffcf9;
 }
 
 #login-button:hover {
@@ -450,9 +451,10 @@ main > h1 {
 
 .profile-container {
   display: flex;
-  border-radius: 20px;
-  background-color: #fffcf9;
+  border-radius: 15px;
+  background-color: #7e2ec6;
   margin: 20px;
+  color: #fffcf9;
   padding: 20px;
   min-width: 485px;
 }
@@ -467,18 +469,23 @@ main > h1 {
 .event-container {
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
-  background-color: #fffcf9;
+  border-radius: 15px;
+  background-color: #7e2ec6;
   margin: 20px;
   padding: 20px;
   min-width: 155px;
   justify-content: center;
   text-align: center;
+  transition: 0.3s ease;
+  color: #fffcf9;
 }
 
 .event-container:hover {
   cursor: pointer;
-  background-color: #f5f7f0;
+  /* background-color: #f5f7f0; */
+  /* border: 1px solid #7e2ec6; */
+  /* color: #7e2ec6; */
+  transform: translateY(-10px);
 }
 
 /* Tab navigation */
@@ -488,16 +495,25 @@ main > h1 {
   margin: 0 10vw 0 10vw;
   display: flex;
   justify-content: space-around;
+  /* border-top: 1px solid #e0e0e5;
+  border-left: 1px solid #e0e0e5;
+  border-right: 1px solid #e0e0e5;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px; */
 }
 
 .tab a {
   background-color: inherit;
   float: left;
-  border: none;
+  border-top: 1px solid #e0e0e5;
+  border-left: 1px solid #e0e0e5;
+  border-right: 1px solid #e0e0e5;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
-  transition: 0.3s ease;
+  transition: 0.1s ease;
   font-size: 17px;
   color: #262322;
   width: 100%;
@@ -505,11 +521,11 @@ main > h1 {
 }
 
 .tab a:hover {
-  background-color: #ddd;
+  border-bottom: 4px solid black;
 }
 
 .tab a.active {
-  background-color: #ccc;
+  border-bottom: 4px solid black;
 }
 
 .tabcontent {
@@ -518,7 +534,9 @@ main > h1 {
   border: 1px solid #ccc;
   border-top: none;
   margin: 0 10vw 10vw 10vw;
-  background-color: #d3d3d3;
+  background-color: #7e2ec6;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .profile-card {
@@ -572,7 +590,7 @@ main > h1 {
 }
 
 textarea {
-  border: none;
+  border: 1px solid #e0e0e5;
   font-family: "Hind Siliguri", sans-serif;
 }
 
@@ -727,7 +745,7 @@ svg:hover {
     top: 70px;
     gap: 0;
     flex-direction: column;
-    background-color: #262626;
+    background-color: #7e2ec6;
     width: 100%;
     text-align: center;
     transition: 0.3s;
@@ -739,6 +757,10 @@ svg:hover {
 
   .nav-menu.active {
     left: 0;
+  }
+
+  .nav-menu.active a {
+    color: white;
   }
 
   /* Header */
