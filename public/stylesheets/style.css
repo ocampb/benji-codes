@@ -40,7 +40,7 @@ li {
 }
 
 a {
-  color: #262322;
+  color: #fffcf9;
   text-decoration: none;
 }
 
@@ -114,7 +114,12 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; */
-  background-color: #d3d3d3;
+  background: rgb(59, 0, 134);
+  background: linear-gradient(
+    18deg,
+    rgba(59, 0, 134, 1) 0%,
+    rgba(162, 58, 255, 1) 100%
+  );
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,6 +140,7 @@ a {
   margin-left: 20%;
   margin-right: 20%;
   margin-top: 0;
+  color: #fffcf9;
   /* font-size: 80px; */
   font-size: clamp(1rem, 1rem + 10vw, 5rem);
 }
@@ -143,6 +149,7 @@ a {
   /* font-size: 30px; */
   font-family: Glegoo, serif;
   font-size: clamp(1rem, 0.5rem + 3vw, 1.8rem);
+  color: #fffcf9;
 }
 
 #landing-button {
@@ -549,6 +556,10 @@ input[type="time"] {
   font-family: "Hind Siliguri", sans-serif;
 }
 
+input[type="date"] {
+  font-family: "Hind Siliguri", sans-serif;
+}
+
 /* ====== EVENT CHOICE PAGE ====== */
 .event-choice-container {
   display: flex;
@@ -559,23 +570,30 @@ input[type="time"] {
 footer {
   width: 100vw;
   /* height: 70px; */
-  background-color: #262626;
-  color: #f5f7f0;
+  background-color: #fffcf9;
+  color: #262322;
   position: relative;
   bottom: 0;
   left: 0;
 }
 
+#nav-branding a {
+  background-color: #fffcf9;
+  color: #262322;
+}
+
 .brand {
   width: 100vw;
   height: 40px;
-  background-color: #262626;
+  background-color: #fffcf9;
+  color: #262322;
   display: flex;
   justify-content: center;
 }
 
 .copyright {
-  background-color: #262626;
+  background-color: #fffcf9;
+  color: #262322;
   display: flex;
   justify-content: space-between;
 }
@@ -592,7 +610,8 @@ footer {
 
 .flex-terms a {
   text-decoration: none;
-  color: #f5f7f0;
+  background-color: #fffcf9;
+  color: #262322;
 }
 
 .flex-terms a:hover {
@@ -613,7 +632,8 @@ footer {
 svg {
   width: 50px;
   height: 30px;
-  color: white;
+  /* background-color: #fffcf9; */
+  color: #262322;
   text-decoration: none;
   transition: 0.3s ease;
 }
@@ -745,5 +765,9 @@ svg:hover {
   /* Event Choice */
   #heading-choice {
     margin: 0 5vw 0 5vw;
+  }
+
+  #nav-branding a {
+    margin-left: 0;
   }
 }
