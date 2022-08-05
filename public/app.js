@@ -120,15 +120,13 @@ const deletePet = (petId) => {
       "Content-Type": "application/json",
     },
   })
-    .then((response) => response.json())
     .then(() => {
-      console.log("Success:", data);
+      window.location.href = "/mypets";
     })
     .catch((error) => {
       console.error("Error:", error);
     });
   console.log("delete pet with id " + petId);
-  window.location.href = "/mypets";
 };
 
 // ====== Pet Profile Page ======
