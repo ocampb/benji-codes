@@ -31,7 +31,7 @@ h2 {
 
 /* ====== NAVBAR ====== */
 header {
-  background-color: #262626;
+  background-color: #262322;
   width: 100vw;
 }
 
@@ -99,10 +99,6 @@ a {
   padding: 10px;
 }
 
-.nav-link:hover {
-  border-bottom: 1px solid #fffcf9;
-}
-
 .hamburger {
   display: none;
   cursor: pointer;
@@ -117,20 +113,34 @@ a {
   background-color: #262322;
 }
 
+#bar-landing {
+  background-color: #fffcf9;
+}
+
 /* ====== LANDING PAGE ====== */
 #hero-image {
   min-height: 100vh;
   width: 100vw;
-  background: #3b0086;
-  background: linear-gradient(
-    18deg,
-    rgba(59, 0, 134, 1) 0%,
-    rgba(162, 58, 255, 1) 100%
-  );
+  /* background: #3b0086; */
+  background: linear-gradient(18deg, #3b0086, #4e01b2, rgba(162, 58, 255, 1));
+  background-size: 400% 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 #hero-text {
@@ -201,7 +211,7 @@ input {
 
 #login-button {
   background-color: #7e2ec6;
-  color: white;
+  color: #fffcf9;
   padding: 1.6em 6em;
   margin: 18.72px 40px 0 40px;
   cursor: pointer;
@@ -223,7 +233,7 @@ input {
   justify-content: center;
   width: 30vw;
   height: 113vh;
-  background: rgb(59, 0, 134);
+  background: #3b0086;
   background: linear-gradient(
     18deg,
     rgba(59, 0, 134, 1) 0%,
@@ -252,8 +262,8 @@ input {
 }
 
 .button-style {
-  background-color: white;
-  color: black;
+  background-color: #fffcf9;
+  color: #262322;
   padding: 1em 6em;
   cursor: pointer;
   border-radius: 3.33em;
@@ -261,18 +271,18 @@ input {
 }
 
 .button-style:hover {
-  background-color: black;
-  color: white;
+  background-color: #262322;
+  color: #fffcf9;
 }
 
 .right-link {
-  color: rgb(139, 136, 136);
+  color: #8b8888;
   text-decoration: none;
   text-align: center;
 }
 
 .right-link:hover {
-  color: rgb(117, 117, 117);
+  color: #757575;
   text-decoration: underline;
 }
 
@@ -291,16 +301,16 @@ small {
 }
 
 .success {
-  border: 1px solid rgb(9, 174, 9);
+  border: 1px solid #09ae09;
 }
 
 .error {
-  border: 1px solid red;
+  border: 1px solid #ff0000;
   visibility: visible;
 }
 
 .mess-error {
-  color: red;
+  color: #ff0000;
   visibility: visible;
 }
 
@@ -320,6 +330,12 @@ small {
 #welcome {
   font-size: 40px;
   margin-left: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  border-right: 0.15em solid #262322;
+  animation: typing 1s steps(20, end) forwards,
+    blink-caret 0.75s step-end infinite;
 }
 
 .mypets-head-container {
@@ -502,11 +518,11 @@ main > h1 {
 }
 
 .tab a:hover {
-  border-bottom: 4px solid black;
+  border-bottom: 4px solid #262322;
 }
 
 .tab a.active {
-  border-bottom: 4px solid black;
+  border-bottom: 4px solid #262322;
 }
 
 .tabcontent {
@@ -522,16 +538,14 @@ main > h1 {
 
 .profile-card {
   border-radius: 20px;
-  /* max-width: 30vw; */
   padding: 20px;
   margin: 20px;
   margin-left: 40px;
   margin-right: 40px;
-  background-color: white;
+  background-color: #fffcf9;
   display: flex;
   flex-direction: column;
-  color: black;
-  /* cursor: pointer; */
+  color: #262322;
 }
 
 .glyph-container {
@@ -553,7 +567,6 @@ main > h1 {
 .add-container {
   width: 100vw;
   height: 100vh;
-  /* display: block; */
   object-fit: cover;
   object-position: center;
   display: flex;
@@ -587,13 +600,11 @@ input[type="date"] {
 /* ====== EVENT CHOICE PAGE ====== */
 .event-choice-container {
   display: flex;
-  /* flex-direction: row; */
   margin-top: 90px;
 }
 /* ====== FOOTER ====== */
 footer {
   width: 100vw;
-  /* height: 70px; */
   background-color: #fffcf9;
   color: #262322;
   position: relative;
@@ -646,7 +657,6 @@ footer {
   text-decoration: none;
   color: #fffcf9;
   transition: 0.3s ease;
-  /* margin-left: 3.8em; */
 }
 
 .brand a:hover {
@@ -661,11 +671,11 @@ svg {
   width: 50px;
   height: 30px;
   text-decoration: none;
-  transition: 0.3s ease;
+  transition: 0.3s ease-in-out;
 }
 
 svg:hover {
-  transform: translateY(-10px);
+  transform: scale(1.1);
 }
 
 .copyright a {
@@ -771,6 +781,11 @@ svg:hover {
   .main-profile-container {
     flex-direction: column;
   }
+
+  #welcome {
+    border-right: none;
+    white-space: normal;
+  }
 }
 
 @media (max-width: 704px) {
@@ -805,5 +820,104 @@ svg:hover {
   /* Event Choice */
   #heading-choice {
     margin: 0 5vw 0 5vw;
+  }
+}
+
+/* ====== Animations ====== */
+.landing-animate {
+  animation: slideInDown 2s;
+}
+
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-25%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.underline-animation {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.underline-animation:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: #fffcf9;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.underline-animation:hover:before,
+.underline-animation:focus:before,
+.underline-animation:active:before {
+  left: 0;
+  right: 0;
+}
+
+.underline-animation2 {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.underline-animation2:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: #262322;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.underline-animation2:hover:before,
+.underline-animation2:focus:before,
+.underline-animation2:active:before {
+  left: 0;
+  right: 0;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #262322;
   }
 }

@@ -16,6 +16,12 @@
     <link
       defer
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link
+      defer
+      rel="stylesheet"
       type="text/css"
       href="./stylesheets/style.css"
     />
@@ -23,22 +29,24 @@
     <title>BenjiKnows</title>
   </head>
   <body>
-    <header class="landing-nav">
+    <header class="landing-nav landing-animate">
       <nav class="navbar">
         <a href="index.html" class="nav-branding">BenjiKnows</a>
         <ul class="nav-menu">
           <li class="nav-item">
-            <a href="/signup.html" class="nav-link">Sign Up</a>
+            <a href="/signup.html" class="nav-link underline-animation"
+              >Sign Up</a
+            >
           </li>
           <li class="nav-item">
-            <a href="/login.html" class="nav-link">Login</a>
+            <a href="/login.html" class="nav-link underline-animation">Login</a>
           </li>
         </ul>
 
         <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+          <span class="bar" id="bar-landing"></span>
+          <span class="bar" id="bar-landing"></span>
+          <span class="bar" id="bar-landing"></span>
         </div>
       </nav>
     </header>
@@ -46,8 +54,16 @@
     <main>
       <div id="hero-image">
         <div class="hero-text">
-          <h1 id="hero-header">Welcome to BenjiKnows</h1>
-          <a href="/signup.html" id="landing-button" class="button-style"
+          <h1 id="hero-header" class="landing-animate">
+            Welcome to BenjiKnows
+          </h1>
+          <h2 class="landing-animate">
+            The pet tracking resource you always needed
+          </h2>
+          <a
+            href="/signup.html"
+            id="landing-button"
+            class="button-style landing-animate"
             >Create Account</a
           >
         </div>
