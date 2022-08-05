@@ -25,10 +25,20 @@
   <body>
     <header class="alt-nav">
       <nav class="navbar">
-        <a href="#" class="nav-branding alt-nav-brand">BenjiKnows</a>
+        <a href="#" class="nav-branding alt-nav-brand"
+          >BenjiKnows<svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 640 512"
+            fill="#262322"
+          >
+            <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path
+              d="M18.43 255.8L192 224L100.8 292.6C90.67 302.8 97.8 320 112 320h222.7c-9.499-26.5-14.75-54.5-14.75-83.38V194.2L200.3 106.8C176.5 90.88 145 92.75 123.3 111.2l-117.5 116.4C-6.562 238 2.436 258 18.43 255.8zM575.2 289.9l-100.7-50.25c-16.25-8.125-26.5-24.75-26.5-43V160h63.99l28.12 22.62C546.1 188.6 554.2 192 562.7 192h30.1c11.1 0 23.12-6.875 28.5-17.75l14.37-28.62c5.374-10.87 4.25-23.75-2.999-33.5l-74.49-99.37C552.1 4.75 543.5 0 533.5 0H296C288.9 0 285.4 8.625 290.4 13.62L351.1 64L292.4 88.75c-5.874 3-5.874 11.37 0 14.37L351.1 128l-.0011 108.6c0 72 35.99 139.4 95.99 179.4c-195.6 6.75-344.4 41-434.1 60.88c-8.124 1.75-13.87 9-13.87 17.38C.0463 504 8.045 512 17.79 512h499.1c63.24 0 119.6-47.5 122.1-110.8C642.3 354 617.1 310.9 575.2 289.9zM489.1 66.25l45.74 11.38c-2.75 11-12.5 18.88-24.12 18.25C497.7 95.25 484.8 83.38 489.1 66.25z"
+            /></svg></a>
         <ul class="nav-menu">
           <li class="nav-item">
-            <a href="/logout" class="nav-link alt-nav-link">Logout</a>
+            <a href="/logout" class="nav-link alt-nav-link underline-animation2"
+              >Logout</a>
           </li>
         </ul>
 
@@ -43,8 +53,14 @@
     <main>
       <h1>${pet.name}'s Profile</h1>
       <div class="main-profile-container">
-        <div class="profile-container" id="profile_container">
-          <div>image</div>
+        <div class="profile-container">
+          <div class="profile-box">
+            <img
+              src="/profile-image.png"
+              alt="Pet Profile Picture"
+              id="profile-image"
+            />
+          </div>
           <div>
             <h3>${pet.name}</h3>
             <p>${pet.species}</p>
@@ -102,7 +118,6 @@
         ${RecentMedication.map(med => { return `
         <div class="profile-card">
           <div class="glyph-container">
-            <!-- <div class="glyph">Glyph</div> -->
             <div class="description-container">
               <h3>${med.name}</h3>
               <p>${med.date_administered}</p>
@@ -132,11 +147,26 @@
         ${RecentEnrichment.map(activity => { return `
         <div class="profile-card">
           <div class="glyph-container">
-            <!-- <div class="glyph">Glyph</div> -->
             <div class="description-container">
               <h3>${activity.type}</h3>
               <p>${activity.duration}</p>
               <p>${activity.notes}</p>
+              <div class="glyph-contain">
+                <div class="option">
+                  <a href="#" class="option-link">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                      class="glyph-size"
+                    >
+                      <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                      <path
+                        d="M421.7 220.3L188.5 453.4L154.6 419.5L158.1 416H112C103.2 416 96 408.8 96 400V353.9L92.51 357.4C87.78 362.2 84.31 368 82.42 374.4L59.44 452.6L137.6 429.6C143.1 427.7 149.8 424.2 154.6 419.5L188.5 453.4C178.1 463.8 165.2 471.5 151.1 475.6L30.77 511C22.35 513.5 13.24 511.2 7.03 504.1C.8198 498.8-1.502 489.7 .976 481.2L36.37 360.9C40.53 346.8 48.16 333.9 58.57 323.5L291.7 90.34L421.7 220.3zM492.7 58.75C517.7 83.74 517.7 124.3 492.7 149.3L444.3 197.7L314.3 67.72L362.7 19.32C387.7-5.678 428.3-5.678 453.3 19.32L492.7 58.75z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -146,10 +176,22 @@
 
     <footer>
       <div class="brand">
-        <div id="nav-branding"><a href="#">BenjiKnows</a></div>
+        <div id="nav-branding">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 512"
+              fill="#262322"
+            >
+              <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+              <path
+                d="M18.43 255.8L192 224L100.8 292.6C90.67 302.8 97.8 320 112 320h222.7c-9.499-26.5-14.75-54.5-14.75-83.38V194.2L200.3 106.8C176.5 90.88 145 92.75 123.3 111.2l-117.5 116.4C-6.562 238 2.436 258 18.43 255.8zM575.2 289.9l-100.7-50.25c-16.25-8.125-26.5-24.75-26.5-43V160h63.99l28.12 22.62C546.1 188.6 554.2 192 562.7 192h30.1c11.1 0 23.12-6.875 28.5-17.75l14.37-28.62c5.374-10.87 4.25-23.75-2.999-33.5l-74.49-99.37C552.1 4.75 543.5 0 533.5 0H296C288.9 0 285.4 8.625 290.4 13.62L351.1 64L292.4 88.75c-5.874 3-5.874 11.37 0 14.37L351.1 128l-.0011 108.6c0 72 35.99 139.4 95.99 179.4c-195.6 6.75-344.4 41-434.1 60.88c-8.124 1.75-13.87 9-13.87 17.38C.0463 504 8.045 512 17.79 512h499.1c63.24 0 119.6-47.5 122.1-110.8C642.3 354 617.1 310.9 575.2 289.9zM489.1 66.25l45.74 11.38c-2.75 11-12.5 18.88-24.12 18.25C497.7 95.25 484.8 83.38 489.1 66.25z"
+              /></svg
+          ></a>
+        </div>
       </div>
       <div class="copyright">
-        <div id="copy">©2022 BenjiKnows, Inc. All Rights Reserved.</div>
+        <div id="copy">©2022 BenjiCodes, Inc. All Rights Reserved.</div>
         <div class="glyphs">
           <a href="#">
             <svg
