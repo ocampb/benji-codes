@@ -44,7 +44,13 @@
       <h1>${pet.name}'s Profile</h1>
       <div class="main-profile-container">
         <div class="profile-container">
-          <div>image</div>
+          <div class="profile-box">
+            <img
+              src="/profile-image.png"
+              alt="Pet Profile Picture"
+              id="profile-image"
+            />
+          </div>
           <div>
             <h3>${pet.name}</h3>
             <p>${pet.species}</p>
@@ -74,7 +80,6 @@
         ${RecentMedication.map(med => { return `
         <div class="profile-card">
           <div class="glyph-container">
-            <!-- <div class="glyph">Glyph</div> -->
             <div class="description-container">
               <h3>${med.name}</h3>
               <p>${med.date_administered}</p>
@@ -153,14 +158,10 @@
         ${RecentEnrichment.map(activity => { return `
         <div class="profile-card">
           <div class="glyph-container">
-            <!-- <div class="glyph">Glyph</div> -->
             <div class="description-container">
               <h3>${activity.type}</h3>
               <p>${activity.duration}</p>
               <p>${activity.notes}</p>
-              <!-- <div class="option">
-                <a href="#" class="option-link">...</a>
-              </div> -->
               <div class="glyph-contain">
                 <div class="option">
                   <a href="#" class="option-link">
@@ -189,7 +190,7 @@
         <div id="nav-branding"><a href="#">BenjiKnows</a></div>
       </div>
       <div class="copyright">
-        <div id="copy">©2022 BenjiKnows, Inc. All Rights Reserved.</div>
+        <div id="copy">©2022 BenjiCodes, Inc. All Rights Reserved.</div>
         <div class="glyphs">
           <a href="#">
             <svg

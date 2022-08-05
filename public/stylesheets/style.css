@@ -25,7 +25,6 @@ h1 {
 }
 
 h2 {
-  /* font-family: "Glegoo", serif; */
   text-align: center;
   color: #fffcf9;
 }
@@ -97,13 +96,10 @@ a {
 }
 
 .nav-link {
-  /* transition: 0.3s ease; */
   padding: 10px;
-  /* border-radius: 20px; */
 }
 
 .nav-link:hover {
-  /* color: #8a8a8a; */
   border-bottom: 1px solid #fffcf9;
 }
 
@@ -125,12 +121,7 @@ a {
 #hero-image {
   min-height: 100vh;
   width: 100vw;
-  /* height: 944px; */
-  /* background-image: url();
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; */
-  background: rgb(59, 0, 134);
+  background: #3b0086;
   background: linear-gradient(
     18deg,
     rgba(59, 0, 134, 1) 0%,
@@ -157,15 +148,7 @@ a {
   margin-right: 20%;
   margin-top: 0;
   color: #fffcf9;
-  /* font-size: 80px; */
   font-size: clamp(1rem, 1rem + 10vw, 5rem);
-}
-
-#hero-description {
-  /* font-size: 30px; */
-  font-family: Glegoo, serif;
-  font-size: clamp(1rem, 0.5rem + 3vw, 1.8rem);
-  color: #fffcf9;
 }
 
 #landing-button {
@@ -221,7 +204,6 @@ input {
   color: white;
   padding: 1.6em 6em;
   margin: 18.72px 40px 0 40px;
-  /* display: block; */
   cursor: pointer;
   border-radius: 3.33em;
   transition: 0.3s ease;
@@ -241,7 +223,6 @@ input {
   justify-content: center;
   width: 30vw;
   height: 113vh;
-  /* background-color: #7e2ec6; */
   background: rgb(59, 0, 134);
   background: linear-gradient(
     18deg,
@@ -274,7 +255,6 @@ input {
   background-color: white;
   color: black;
   padding: 1em 6em;
-  /* display: block; */
   cursor: pointer;
   border-radius: 3.33em;
   transition: 0.3s ease;
@@ -462,15 +442,24 @@ main > h1 {
 .profile-container > div:nth-child(1) {
   border-radius: 20px;
   background-color: #fffcf9;
-  padding: 50px;
+  padding: 10px;
   margin-right: 20px;
+}
+
+#profile-image {
+  width: 200px;
+}
+
+.profile-box {
+  padding-right: 20px;
 }
 
 .event-container {
   display: flex;
   flex-direction: column;
   border-radius: 15px;
-  background-color: #7e2ec6;
+  background: #3b0086;
+  background: linear-gradient(18deg, #3b0086 0%, rgba(162, 58, 255, 1) 100%);
   margin: 20px;
   padding: 20px;
   min-width: 155px;
@@ -482,9 +471,6 @@ main > h1 {
 
 .event-container:hover {
   cursor: pointer;
-  /* background-color: #f5f7f0; */
-  /* border: 1px solid #7e2ec6; */
-  /* color: #7e2ec6; */
   transform: translateY(-10px);
 }
 
@@ -495,11 +481,6 @@ main > h1 {
   margin: 0 10vw 0 10vw;
   display: flex;
   justify-content: space-around;
-  /* border-top: 1px solid #e0e0e5;
-  border-left: 1px solid #e0e0e5;
-  border-right: 1px solid #e0e0e5;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px; */
 }
 
 .tab a {
@@ -592,6 +573,7 @@ main > h1 {
 textarea {
   border: 1px solid #e0e0e5;
   font-family: "Hind Siliguri", sans-serif;
+  padding: 10px;
 }
 
 input[type="time"] {
@@ -683,7 +665,7 @@ svg {
 }
 
 svg:hover {
-  fill: #7e2ec6;
+  transform: translateY(-10px);
 }
 
 .copyright a {
