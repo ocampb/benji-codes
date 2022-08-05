@@ -2,22 +2,22 @@ const { Enrichment } = require("../../models");
 var express = require("express");
 var router = express.Router();
 
-router.post("/create_enrichment", async (req, res) => {
-  const { type, duration, notes, PetId } = req.body;
+router.post("/create_enrichment/:petId", async (req, res) => {
+  const { petId } = req.params;
+  const { type, duration, notes } = req.body;
   try {
-    const PetId = req.session.PetId;
     const NewEnrichment = {
       type: type,
       duration: duration,
       notes: notes,
       createdAt: new Date(),
       updatedAt: new Date(),
-      PetId: req.session.PetId,
+      PetId: petId,
     };
     console.log(NewEnrichment);
     const NewEnrichment1 = await Enrichment.create(NewEnrichment);
     console.log(NewEnrichment1);
-    res.redirect("/petprofile/" + req.params.petId);
+    res.redirect("/petprofile/" + petId);
   } catch (error) {
     console.log(error);
     res.send(error);
