@@ -27,6 +27,7 @@ h1 {
 h2 {
   /* font-family: "Glegoo", serif; */
   text-align: center;
+  color: #fffcf9;
 }
 
 /* ====== NAVBAR ====== */
@@ -56,6 +57,18 @@ a {
   background-color: transparent;
   position: absolute;
   width: 100vw;
+}
+
+.alt-nav {
+  background-color: transparent;
+}
+
+.alt-nav-brand {
+  color: #262322;
+}
+
+.alt-nav-link {
+  color: #262322;
 }
 
 .nav-and-left {
@@ -105,7 +118,7 @@ a {
   height: 3px;
   margin: 5px auto;
   transition: all 0.3s ease-in-out;
-  background-color: white;
+  background-color: #262322;
 }
 
 /* ====== LANDING PAGE ====== */
@@ -200,7 +213,7 @@ input {
   margin: 0.6em 0em 0.6em 0em;
   border-radius: 3.33em;
   border: 1px solid #e0e0e5;
-  background-color: #fffcf9;
+  background-color: transparent;
 }
 
 #login-button {
@@ -212,6 +225,7 @@ input {
   cursor: pointer;
   border-radius: 3.33em;
   transition: 0.3s ease;
+  border: 1px solid #fffcf9;
 }
 
 #login-button:hover {
@@ -227,7 +241,13 @@ input {
   justify-content: center;
   width: 30vw;
   height: 113vh;
-  background-color: #7e2ec6;
+  /* background-color: #7e2ec6; */
+  background: rgb(59, 0, 134);
+  background: linear-gradient(
+    18deg,
+    rgba(59, 0, 134, 1) 0%,
+    rgba(162, 58, 255, 1) 100%
+  );
 }
 
 .right-container {
@@ -333,8 +353,8 @@ small {
   margin: 30px;
   margin-right: 50px;
   padding: 20px;
-  border-radius: 20px;
-  background-color: #d3d3d3;
+  border-radius: 15px;
+  background-color: #7e2ec6;
 }
 
 .recent-grid {
@@ -345,8 +365,8 @@ small {
 .recent-cards {
   padding: 15px;
   margin: 15px;
-  background-color: white;
-  border-radius: 20px;
+  background-color: #fffcf9;
+  border-radius: 15px;
 }
 
 .pets-container {
@@ -355,16 +375,17 @@ small {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 20px;
+  border-radius: 15px;
   margin: 30px;
   margin-top: 80px;
   margin-left: 50px;
   margin-right: 50px;
-  background-color: #d3d3d3;
+  background-color: #7e2ec6;
 }
 
 #mypets-header {
   margin-bottom: 10px;
+  color: #fffcf9;
 }
 
 .mypets-grid {
@@ -376,21 +397,22 @@ small {
 }
 
 .mypets-card {
-  border-radius: 20px;
+  border-radius: 15px;
   max-width: 200px;
   padding: 20px;
   margin: 20px;
   padding-bottom: 5px;
   text-align: center;
-  background-color: white;
+  background-color: #fffcf9;
   display: flex;
   flex-direction: column;
-  color: black;
+  color: #262322;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .mypets-card:hover {
-  background-color: #f5f7f0;
+  transform: translateY(-10px);
 }
 
 #plus-sign {
@@ -408,7 +430,7 @@ small {
 }
 
 .option-link {
-  color: black;
+  color: #262322;
   font-size: 20px;
 }
 
@@ -429,16 +451,17 @@ main > h1 {
 
 .profile-container {
   display: flex;
-  border-radius: 20px;
-  background-color: #f1f1f1;
+  border-radius: 15px;
+  background-color: #7e2ec6;
   margin: 20px;
+  color: #fffcf9;
   padding: 20px;
   min-width: 485px;
 }
 
 .profile-container > div:nth-child(1) {
   border-radius: 20px;
-  background-color: #fff;
+  background-color: #fffcf9;
   padding: 50px;
   margin-right: 20px;
 }
@@ -446,49 +469,63 @@ main > h1 {
 .event-container {
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
-  background-color: #f1f1f1;
+  border-radius: 15px;
+  background-color: #7e2ec6;
   margin: 20px;
   padding: 20px;
   min-width: 155px;
   justify-content: center;
   text-align: center;
+  transition: 0.3s ease;
+  color: #fffcf9;
 }
 
 .event-container:hover {
   cursor: pointer;
-  background-color: #f5f7f0;
+  /* background-color: #f5f7f0; */
+  /* border: 1px solid #7e2ec6; */
+  /* color: #7e2ec6; */
+  transform: translateY(-10px);
 }
 
 /* Tab navigation */
 .tab {
   overflow: hidden;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #262322;
   margin: 0 10vw 0 10vw;
   display: flex;
   justify-content: space-around;
+  /* border-top: 1px solid #e0e0e5;
+  border-left: 1px solid #e0e0e5;
+  border-right: 1px solid #e0e0e5;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px; */
 }
 
 .tab a {
   background-color: inherit;
   float: left;
-  border: none;
+  border-top: 1px solid #e0e0e5;
+  border-left: 1px solid #e0e0e5;
+  border-right: 1px solid #e0e0e5;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
-  transition: 0.3s ease;
+  transition: 0.1s ease;
   font-size: 17px;
-  color: black;
+  color: #262322;
   width: 100%;
   text-align: center;
 }
 
 .tab a:hover {
-  background-color: #ddd;
+  border-bottom: 4px solid black;
 }
 
 .tab a.active {
-  background-color: #ccc;
+  border-bottom: 4px solid black;
 }
 
 .tabcontent {
@@ -497,7 +534,9 @@ main > h1 {
   border: 1px solid #ccc;
   border-top: none;
   margin: 0 10vw 10vw 10vw;
-  background-color: #d3d3d3;
+  background-color: #7e2ec6;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .profile-card {
@@ -519,7 +558,7 @@ main > h1 {
 }
 
 .glyph {
-  border: 2px solid black;
+  border: 2px solid #262322;
   padding: 10px;
   margin: 10px;
 }
@@ -540,18 +579,18 @@ main > h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgb(198, 198, 198);
+  background-color: #fffcf9;
 }
 
 #petspecies {
   padding: 1em;
   border-radius: 3.33em;
   margin: 8px 0;
-  border: none;
+  border: 1px solid #e0e0e5;
 }
 
 textarea {
-  border: none;
+  border: 1px solid #e0e0e5;
   font-family: "Hind Siliguri", sans-serif;
 }
 
@@ -623,30 +662,36 @@ footer {
 
 .brand a {
   text-decoration: none;
-  color: #f5f7f0;
+  color: #fffcf9;
   transition: 0.3s ease;
-  margin-left: 3em;
+  /* margin-left: 3.8em; */
 }
 
 .brand a:hover {
-  color: #f5f7f0;
+  color: #fffcf9;
+}
+
+#forms-footer-brand {
+  margin: 0;
 }
 
 svg {
   width: 50px;
   height: 30px;
-  /* background-color: #fffcf9; */
-  color: #262322;
   text-decoration: none;
   transition: 0.3s ease;
 }
 
 svg:hover {
-  fill: #8b8888;
+  fill: #7e2ec6;
 }
 
 .copyright a {
   text-decoration: none;
+}
+
+.glyphs {
+  margin-right: 60px;
 }
 
 /* ====== MEDIA QUERIES ====== */
@@ -700,7 +745,7 @@ svg:hover {
     top: 70px;
     gap: 0;
     flex-direction: column;
-    background-color: #262626;
+    background-color: #7e2ec6;
     width: 100%;
     text-align: center;
     transition: 0.3s;
@@ -712,6 +757,10 @@ svg:hover {
 
   .nav-menu.active {
     left: 0;
+  }
+
+  .nav-menu.active a {
+    color: white;
   }
 
   /* Header */
@@ -742,6 +791,12 @@ svg:hover {
   }
 }
 
+@media (max-width: 704px) {
+  .brand a {
+    margin-left: 0;
+  }
+}
+
 @media (max-width: 550px) {
   .profile-container {
     min-width: 320px;
@@ -768,9 +823,5 @@ svg:hover {
   /* Event Choice */
   #heading-choice {
     margin: 0 5vw 0 5vw;
-  }
-
-  #nav-branding a {
-    margin-left: 0;
   }
 }
