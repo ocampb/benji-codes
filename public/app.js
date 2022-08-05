@@ -175,6 +175,16 @@ if (createEnrichmentForm) {
   );
 }
 
+const createVetVisitForm = document.querySelector("#create_vet_visit_form");
+
+if (createVetVisitForm) {
+  const petId = Object.fromEntries(new URLSearchParams(location.search)).petId;
+  createVetVisitForm.setAttribute(
+    "action",
+    createVetVisitForm.getAttribute("action") + "/" + petId
+  );
+}
+
 const pet_profile_pencil = document.getElementById("pet-profile-pencil");
 const profile_container = document.getElementById("profile_container");
 
@@ -189,6 +199,7 @@ const login_button = document.getElementById("login-button");
 petNameUpdate = document.getElementById("petnameupdate");
 
 const updatePetNameDB = (petId) => {
+  event.preventDefault();
   event.stopPropagation();
   const newPetName = petNameUpdate.value;
   fetch("/pets/update_pet/" + petId, {
@@ -200,10 +211,10 @@ const updatePetNameDB = (petId) => {
   })
     .then((response) => response.json())
     .then((data) => {
+      window.location.href = "/petprofile/" + petId;
       console.log("Success:", data);
     })
     .catch((error) => {
       console.error("Error:", error);
     });
-  window.location.href = "/petprofile";
 };

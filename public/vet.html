@@ -47,18 +47,18 @@
         <div class="containerHome">
         <div class="add-container">
           <h1 class="heading-style">Create A Vet Event</h1>
-          <form action="" method="post" class="form-style">
-            <label for="namevet">Name of Vet Clinic</label>
-            <input type="text" id="namevet" name="namevet" placeholder="'Atlanta Vet Hospital'" />
+          <form action="/veterinary_visits/create_vet_visit" method="post" class="form-style" id="create_vet_visit_form">
+            <label for="vet_name">Name of Vet Clinic</label>
+            <input type="text" id="vet_name" name="vet_name" placeholder="'Atlanta Vet Hospital'" />
 
-            <label for="datevet">Date of Vet Visit</label>
-            <input type="date" name="datevet" id="datevet" />
+            <label for="date_of_visit">Date of Vet Visit</label>
+            <input type="date" name="date_of_visit" id="date_of_visit" />
 
-            <label for="vetreason">Reason For Visit</label>
-            <input type="text" id="vetreason" name="vetreason" placeholder="'Ear infection'" />
+            <label for="reason">Reason For Visit</label>
+            <input type="text" id="reason" name="reason" placeholder="'Ear infection'" />
 
-            <label for="vetnotes">Notes</label>
-            <textarea name="vetnotes" id="vetnotes" cols="30" rows="5" placeholder=" 'Received an antibiotic'"></textarea>
+            <label for="notes">Notes</label>
+            <textarea name="notes" id="notes" cols="30" rows="5" placeholder=" 'Received an antibiotic'"></textarea>
 
             <input
               class="button-style"
