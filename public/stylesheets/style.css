@@ -121,7 +121,6 @@ a {
 #hero-image {
   min-height: 100vh;
   width: 100vw;
-  /* background: #3b0086; */
   background: linear-gradient(18deg, #3b0086, #4e01b2, rgba(162, 58, 255, 1));
   background-size: 400% 100%;
   display: flex;
@@ -129,18 +128,6 @@ a {
   align-items: center;
   text-align: center;
   animation: gradient 10s ease infinite;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 #hero-text {
@@ -828,17 +815,6 @@ svg:hover {
   animation: slideInDown 2s;
 }
 
-@keyframes slideInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-25%);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-
 .underline-animation {
   display: inline-block;
   vertical-align: middle;
@@ -903,6 +879,17 @@ svg:hover {
   right: 0;
 }
 
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-25%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 @keyframes typing {
   from {
     width: 0;
@@ -919,5 +906,17 @@ svg:hover {
   }
   50% {
     border-color: #262322;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
