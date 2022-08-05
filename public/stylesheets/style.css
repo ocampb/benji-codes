@@ -204,12 +204,12 @@ input {
   cursor: pointer;
   border-radius: 3.33em;
   transition: 0.3s ease;
-  border: 1px solid #fffcf9;
+  border: 2px solid #fffcf9;
 }
 
 #login-button:hover {
   background-color: transparent;
-  border: 1px solid #7e2ec6;
+  border: 2px solid #7e2ec6;
   color: #7e2ec6;
 }
 
