@@ -250,6 +250,7 @@ input {
 
 .button-style {
   background-color: #fffcf9;
+  border: 2px solid #fffcf9;
   color: #262322;
   padding: 1em 6em;
   cursor: pointer;
@@ -258,7 +259,8 @@ input {
 }
 
 .button-style:hover {
-  background-color: #262322;
+  background-color: transparent;
+  border: 2px solid #fffcf9;
   color: #fffcf9;
 }
 
@@ -312,6 +314,12 @@ small {
 #greeting {
   font-size: 60px;
   margin-left: 20px;
+  margin-right: 10px;
+}
+
+.paw-print-container svg {
+  width: 45px;
+  height: 45px;
 }
 
 #welcome {
@@ -328,6 +336,12 @@ small {
 .mypets-head-container {
   display: flex;
   justify-content: space-between;
+}
+
+.paw-print-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
 
 .recent-container {
@@ -665,6 +679,12 @@ svg:hover {
   transform: scale(1.1);
 }
 
+.brand svg {
+  width: 25px;
+  height: 30px;
+  margin-right: 10px;
+}
+
 .copyright a {
   text-decoration: none;
 }
@@ -695,6 +715,19 @@ svg:hover {
 
   .event-choice-container {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 880px) {
+  .mypets-head-container {
+    display: block;
+  }
+
+  #welcome {
+    border-right: none;
+    white-space: normal;
+    animation: none;
+    width: auto;
   }
 }
 
@@ -756,9 +789,6 @@ svg:hover {
   }
 
   /* My Pets */
-  .mypets-head-container {
-    display: block;
-  }
 
   .recent-container {
     margin-left: 50px;
@@ -767,11 +797,6 @@ svg:hover {
   /* Pet Profile */
   .main-profile-container {
     flex-direction: column;
-  }
-
-  #welcome {
-    border-right: none;
-    white-space: normal;
   }
 }
 
@@ -783,7 +808,17 @@ svg:hover {
 
 @media (max-width: 550px) {
   .profile-container {
-    min-width: 320px;
+    min-width: 350px;
+    margin: 13px;
+  }
+
+  .paw-print-container {
+    flex-direction: column;
+  }
+
+  #welcome {
+    text-align: center;
+    margin-left: 0;
   }
 }
 
