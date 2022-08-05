@@ -424,6 +424,7 @@ small {
 .glyph-size {
   width: 30px;
   height: 15px;
+  cursor: pointer;
 }
 
 .option-link {
